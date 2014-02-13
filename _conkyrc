@@ -1,0 +1,107 @@
+# conky configuration
+#
+# The list of variables has been removed from this file in favour
+# of keeping the documentation more maintainable.
+# Check http://conky.sf.net for an up-to-date-list.
+#
+# For ideas about how to modify conky, please see:
+# http://crunchbanglinux.org/forums/topic/59/my-conky-config/
+#
+# For help with conky, please see:
+# http://crunchbanglinux.org/forums/topic/2047/conky-help/
+#
+# Enjoy! :)
+##############################################
+# Settings
+##############################################
+background yes
+use_xft yes
+xftfont Liberation Sans:size=9
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+#own_window_argb_visual yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 200 200
+maximum_width 240
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color 656667
+default_shade_color 000000
+default_outline_color 828282
+alignment top_right
+gap_x 12
+gap_y 56
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+##############################################
+#  Output
+##############################################
+TEXT
+${font Liberation Sans:bold:size=9}${color white}S Y S T E M ${hr}$font$color
+$sysname $kernel $alignr $machine
+Uptime: $alignr $uptime
+
+${font Liberation Sans:bold:size=9}${color white}N E T W O R K ${hr}$font$color
+${downspeedgraph eth0 15, -l}
+DLS: ${downspeed eth0} $alignr Total: ${totaldown eth0}
+${upspeedgraph eth0 15, -l}
+ULS: ${upspeed eth0} $alignr Total: ${totalup eth0}
+
+${font Liberation Sans:bold:size=9}${color white}C P U ${hr}$font$color
+${cpugraph 15, cpu}
+Core 1: $alignr ${cpu cpu1} % 
+${cpubar cpu1}
+Core 2: $alignr ${cpu cpu2} %
+${cpubar cpu2}
+Core 3: $alignr ${cpu cpu3} % 
+${cpubar cpu1}
+Core 4: $alignr ${cpu cpu4} %
+${cpubar cpu2}
+
+${font Liberation Sans:bold:size=9}${color white}R A M ${hr}$font$color
+$mem / $memmax $alignr $memperc%
+$membar
+
+${font Liberation Sans:bold:size=9}${color white}H D D ${hr}$font$color
+/ $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /} %
+${fs_bar /}
+/home $alignc ${fs_used /home} / ${fs_size /home} $alignr ${fs_used_perc /home} %
+${fs_bar /home}
+/media/ntfs-e $alignc ${fs_used /media/ntfs-e} / ${fs_size /media/ntfs-e} $alignr ${fs_used_perc /media/ntfs-e} %
+${fs_bar /media/ntfs-e}
+
+${font Liberation Sans:bold:size=9}${color white}P R O C E S E S S ${hr}$font$color
+${color white}$alignc Top CPU$color
+${top name 1}${alignr}${top pid 1}${top cpu 1} %
+${top name 2}${alignr}${top pid 2}${top cpu 2} %
+${top name 3}${alignr}${top pid 3}${top cpu 3} %
+${top name 4}${alignr}${top pid 4}${top cpu 4} %
+${top name 5}${alignr}${top pid 5}${top cpu 5} %
+${top name 6}${alignr}${top pid 6}${top cpu 6} %
+${color white}$alignc Top RAM$color
+${top_mem name 1}${alignr}${top_mem pid 1}${top mem 1} %
+${top_mem name 2}${alignr}${top_mem pid 2}${top mem 2} %
+${top_mem name 3}${alignr}${top_mem pid 3}${top mem 3} %
+${top_mem name 4}${alignr}${top_mem pid 4}${top mem 4} %
+${top_mem name 5}${alignr}${top_mem pid 5}${top mem 5} %
+${top_mem name 6}${alignr}${top_mem pid 6}${top mem 6} %
+
+${font Liberation Sans:bold:size=9}${color white}S H O R T C U T ${hr}$font$color
+Alt+F2$alignr Run Dialog
+Alt+F3$alignr Alt Menu
+Super+Tab$alignr Client Menu
+Super+e$alignr Editor
+Super+m$alignr Media Player
+Super+h$alignr Task Manager
+Super+l$alignr Lock Screen
+Super+v$alignr Volume Control
+PrtSc$alignr Screenshot
