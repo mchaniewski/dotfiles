@@ -1,4 +1,8 @@
 dotfiles
 ========
 
-My configuration files
+My configuration files for:
+
++ Conky
+
+
