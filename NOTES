@@ -16,3 +16,13 @@ UUID=1F8CEA4B71CDE746   /media/ntfs-d   ntfs    users,auto,rw,exec,defaults     
 # /dev/sda4
 UUID=7B3290FD1082D3EC   /media/ntfs-e   ntfs    users,auto,rw,exec,defaults     0       0
 
+
+# apt-gets
+sudo apt-get install mumble
+# Spotify
+sudo apt-get install libssl0.9.8
+sudo apt-get install spotify-client
+# zsh
+sudo apt-get install zsh
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | bash
+sudo chsh -s $(which zsh) $(whoami)
