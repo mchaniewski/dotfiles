@@ -1,6 +1,7 @@
 # Java
 export JAVA_HOME=$HOME/apps/java
 export PATH=$JAVA_HOME/bin:$PATH
+export JAVA_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,address=8001,server=y,suspend=n -Xms512m -Xmx512m"
 
 # Maven
 export M2_HOME=$HOME/apps/maven
@@ -11,3 +12,12 @@ export PATH=$M2:$PATH
 # Commons
 # Set timestamp for history
 export HISTTIMEFORMAT="%F %T "
+
+# Rust
+export LD_LIBRARY_PATH=/home/mariusz/workspace/rust/rust_bin/lib
+export RUST_PATH=/home/mariusz/workspace/rust/rust_bin
+export PATH=$RUST_PATH/bin:$PATH
+
+# Sublime text 3
+export SUBLIME_PATH=/home/mariusz/apps/sublime_text_3
+export PATH=$SUBLIME_PATH:$PATH
