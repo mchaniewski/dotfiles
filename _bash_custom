@@ -21,3 +21,8 @@ export PATH=$RUST_PATH/bin:$PATH
 # Sublime text 3
 export SUBLIME_PATH=/home/mariusz/apps/sublime_text_3
 export PATH=$SUBLIME_PATH:$PATH
+
+# RBEnv
+export RBENV_HOME=$HOME/.rbenv
+export PATH=$RBENV_HOME/bin:$PATH
+eval "$(rbenv init -)"
