@@ -26,3 +26,16 @@ export PATH=$SUBLIME_PATH:$PATH
 export RBENV_HOME=$HOME/.rbenv
 export PATH=$RBENV_HOME/bin:$PATH
 eval "$(rbenv init -)"
+
+# Node.js
+export NODEJS_HOME=$HOME/apps/node-v0.10.32-linux-x86
+export PATH=$NODEJS_HOME/bin:$PATH
+
+# Exercism
+export EXERCISM_HOME=$HOME/apps/exercism
+export PATH=$EXERCISM_HOME:$PATH
+
+# Go lang
+export GOROOT=$HOME/apps/go1.3.1
+export PATH=$GOROOT/bin:$PATH
+export GOPATH=$HOME/.golang/code
