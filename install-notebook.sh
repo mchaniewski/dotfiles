@@ -1,6 +1,4 @@
 #!/bin/bash
 
-stow zsh
+./install.sh
 stow zsh-notebook
-stow conky
-stow mumble
