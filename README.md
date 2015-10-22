@@ -1,7 +1,14 @@
 # Dotfiles
 
-## Prerequisites:
+## Prerequisites
 + Stow
+
+## Additional steps
+### Tmux
+In order to install all plugins run following command in Tmux:
+```
+Prefix + i
+```
 
 ## Copyright and License
 
