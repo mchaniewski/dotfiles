@@ -1,18 +1,5 @@
-# conky configuration
-#
-# The list of variables has been removed from this file in favour
-# of keeping the documentation more maintainable.
-# Check http://conky.sf.net for an up-to-date-list.
-#
-# For ideas about how to modify conky, please see:
-# http://crunchbanglinux.org/forums/topic/59/my-conky-config/
-#
-# For help with conky, please see:
-# http://crunchbanglinux.org/forums/topic/2047/conky-help/
-#
-# Enjoy! :)
 ##############################################
-# Settings
+#  Settings
 ##############################################
 background yes
 use_xft yes
@@ -51,10 +38,10 @@ $sysname $kernel $alignr $machine
 Uptime: $alignr $uptime
 
 ${font Liberation Sans:bold:size=9}${color white}N E T W O R K ${hr}$font$color
-${downspeedgraph wlan0 15, -l}
-DLS: ${downspeed wlan0} $alignr Total: ${totaldown wlan0}
-${upspeedgraph wlan0 15, -l}
-ULS: ${upspeed wlan0} $alignr Total: ${totalup wlan0}
+${downspeedgraph wlp7s0 15, -l}
+DLS: ${downspeed wlp7s0} $alignr Total: ${totaldown wlp7s0}
+${upspeedgraph wlp7s0 15, -l}
+ULS: ${upspeed wlp7s0} $alignr Total: ${totalup wlp7s0}
 
 ${font Liberation Sans:bold:size=9}${color white}C P U ${hr}$font$color
 ${cpugraph 15, cpu}
@@ -63,15 +50,15 @@ ${cpubar cpu1}
 Core 2 (${execi 8 sensors | grep 'Core 1:' | awk '{print $3;}' | tr -d '°C'} C): $alignr ${cpu cpu2} %
 ${cpubar cpu2}
 
-${font Liberation Sans:bold:size=9}${color white}R A M ${hr}$font$color
-$mem / $memmax $alignr $memperc%
+${font Liberation Sans:bold:size=9}${color white}M E M O R Y ${hr}$font$color
+RAM $mem / $memmax $alignr $memperc%
 $membar
+SWAP $swap / $swapmax $alignr $swapperc%
+$swapbar
 
 ${font Liberation Sans:bold:size=9}${color white}H D D ${hr}$font$color
 / $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /} %
 ${fs_bar /}
-/home $alignc ${fs_used /home} / ${fs_size /home} $alignr ${fs_used_perc /home} %
-${fs_bar /home}
 
 ${font Liberation Sans:bold:size=9}${color white}P R O C E S E S S ${hr}$font$color
 ${color white}$alignc Top CPU$color
@@ -96,3 +83,4 @@ ${top_mem name 6}${alignr}${top_mem pid 6}${top mem 6} %
 #Super+l$alignr Lock Screen
 #Super+v$alignr Volume Control
 #PrtSc$alignr Screenshot
+
